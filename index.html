@@ -47,7 +47,7 @@
 
 
     /* --- Box chứa kỹ năng --- */
-    .square-box {
+    .partners-box {
         width: 180px; /* Giảm kích thước một chút để vừa vặn hơn */
         height: 120px; /* Chuyển sang hình chữ nhật cho cân đối */
         background-color: white;
@@ -70,14 +70,14 @@
 
     }
 
-    .square-box h1 {
+    .partners-box h1 {
         font-size: 1.1rem;
         padding: 15px 10px; /* Tạo khoảng đệm cho chữ */
         flex-shrink: 0; /* Không cho phép H1 bị co lại */
     }
 
     /* --- Chỉnh sửa cho ảnh --- */
-    .square-box img {
+    .partners-box img {
         width: 100%; /* Chiều rộng bằng 100% box */
         width: 180px;
         height: 120px;
@@ -87,16 +87,17 @@
         min-height: 0; /* Cần thiết để flex-grow hoạt động đúng trên một số trình duyệt */
     }
 
-    .square-box:hover {
+    .partners-box:hover {
         transform: translateY(-5px);
         border-color: #8a4dbf;
     }
 
-    .square-box img {
+    .partners-box img {
         width: 180px;
         height: 120px;
         object-fit: contain;
     }
+
 
     /* Bỏ gạch chân cho link */
     a {
