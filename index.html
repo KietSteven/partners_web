@@ -3,165 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Skillset</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>ViamLab Home - Slider Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
-        /* --- CSS Reset & General Styling --- */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        background-color: white;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
-    
-    /* --- Tiêu đề chính --- */
-    h1 {
-        font-size: 3rem;
-        color: black;
-        font-weight: bold;
-        text-align: center;
+        body { font-family: sans-serif; }
+        h1 { text-align: center; margin: 40px 0; }
+        .partner-box {
+            width: 180px; height: 120px; border: 1px solid #ccc;
+            border-radius: 8px; display: flex; justify-content: center;
+            align-items: center; transition: border-color 0.3s;
         }
-
-    h2 {
-        font-size: 1.5rem;
-        color: black;
-        font-weight: bold;
-    }
-    
-    /* --- Container for the boxes --- */
-    .container {
-      max-width: 1920px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-
-
-    /* --- Box chứa kỹ năng --- */
-    .partners-box {
-        width: 180px; /* Giảm kích thước một chút để vừa vặn hơn */
-        height: 120px; /* Chuyển sang hình chữ nhật cho cân đối */
-        background-color: white;
-        border: 1px solid black;
-        border-radius: 8px;
-        transition: transform 0.3s ease, border-color 0.3s ease;
-        
-        /* Căn giữa icon/chữ bên trong */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        /* Định dạng cho chữ/icon bên trong */
-        color: white;
-        font-size: 2.5rem; /* Kích thước cho chữ và icon */
-        font-weight: bold;
-
-        object-fit: contain; /* Giúp ảnh không bị cắt xén */
-        overflow: hidden; /* Ẩn phần thừa nếu ảnh lớn hơn box */
-
-    }
-
-    .partners-box h1 {
-        font-size: 1.1rem;
-        padding: 15px 10px; /* Tạo khoảng đệm cho chữ */
-        flex-shrink: 0; /* Không cho phép H1 bị co lại */
-    }
-
-    /* --- Chỉnh sửa cho ảnh --- */
-    .partners-box img {
-        width: 100%; /* Chiều rộng bằng 100% box */
-        width: 180px;
-        height: 120px;
-        object-fit: contain;
-        flex-grow: 1; /* Cho phép ảnh lấp đầy không gian dọc còn lại */
-        object-fit: cover; /* Giúp ảnh lấp đầy mà không bị méo */
-        min-height: 0; /* Cần thiết để flex-grow hoạt động đúng trên một số trình duyệt */
-    }
-
-    .partners-box:hover {
-        transform: translateY(-5px);
-        border-color: #8a4dbf;
-    }
-
-    .partners-box img {
-        width: 180px;
-        height: 120px;
-        object-fit: contain;
-    }
-
-
-    /* Bỏ gạch chân cho link */
-    a {
-        text-decoration: none;
-    }
-
+        .partner-box:hover { border-color: #8a4dbf; }
+        .partner-box img { max-width: 85%; max-height: 85%; object-fit: contain; }
+        a { text-decoration: none; }
+        /* CSS cho Slider */
+        .partner-slider {
+            width: 100%; max-width: 1200px; padding: 20px 0; position: relative;
+            margin: 0 auto;
+        }
+        .swiper-slide { display: flex; justify-content: center; align-items: center; }
+        .swiper-button-next, .swiper-button-prev { color: #8a4dbf; }
+        .swiper-pagination-bullet-active { background-color: #8a4dbf; }
     </style>
 </head>
 <body>
+
     <h1>Partners</h1>
-    
-    <div class="container">
-        <a href="#">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/CHA.jpg" alt="" title="Công ty CP Nhựa C.H.A">
-            </div>
-        </a>
-        <a href="https://thaiduongrubber.com/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/rubber.jpg" alt="" title="Công ty">
-            </div>
-        </a>
-        <a href="https://wembleymed.com.vn/en/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/wembley_medical.jpg" alt="" title="Công ty">
-            </div>
-        </a>
-        <a href="https://tienthinhwire.com.vn/vi/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/TienThinh.jpg" alt="" title="Công ty dây điện từ Tiến Thịnh">
-            </div>
-        </a>
-        <a href="http://caupha.com/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/CP.jpg" alt="" title="Công ty">
-            </div>
-        </a>
-
-        <a href="https://vtstek.com/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/Vtstek.jpg" alt="" title="Công ty">
-            </div>
-        </a>
-        <a href="https://auravina.com/vi/home/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/auravina.jpg" alt="" title="Công ty">
-            </div>
-        </a>
-        <a href="https://www.sistech.com.vn/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/SIS.jpg" alt="" title="Công ty">
-            </div>
-        </a>
-        <a href="https://ismvietnam.com/vi/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/ISM_Vietnam.jpg" alt="" title="Công ty">
-            </div>
-        </a>
-        <a href="https://indivisys.vn/en/home/">
-            <div class="square-box">
-                <img src="https://partners-web-beta.vercel.app/IVS.jpg" alt="" title="Công ty Cổ phần IVS">
-            </div>
-        </a>
-
+    <div class="swiper partner-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/CHA.jpg" alt="CHA"></div></a></div>
+            <div class="swiper-slide"><a href="https://thaiduongrubber.com/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/rubber.jpg" alt="Thái Dương Rubber"></div></a></div>
+            <div class="swiper-slide"><a href="https://wembleymed.com.vn/en/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/wembley_medical.jpg" alt="Wembley Medical"></div></a></div>
+            <div class="swiper-slide"><a href="https://tienthinhwire.com.vn/vi/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/TienThinh.jpg" alt="Tiến Thịnh"></div></a></div>
+            <div class="swiper-slide"><a href="http://caupha.com/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/CP.jpg" alt="Cầu Phà"></div></a></div>
+            <div class="swiper-slide"><a href="https://vtstek.com/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/Vtstek.jpg" alt="VTStek"></div></a></div>
+            <div class="swiper-slide"><a href="https://auravina.com/vi/home/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/auravina.jpg" alt="Auravina"></div></a></div>            
+            <div class="swiper-slide"><a href="https://www.sistech.com.vn/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/SIS.jpg" alt="SIS"></div></a></div>
+            <div class="swiper-slide"><a href="https://ismvietnam.com/vi/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/ISM_Vietnam.jpg" alt="ISM Vietnam"></div></a></div>
+            <div class="swiper-slide"><a href="https://indivisys.vn/en/home/"><div class="partner-box"><img src="https://partners-web-beta.vercel.app/IVS.jpg" alt="IVS"></div></a></div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.partner-slider', {
+            loop: true,
+            spaceBetween: 30,
+            slidesPerView: 1,
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 20, },
+                768: { slidesPerView: 4, spaceBetween: 40, },
+                1024: { slidesPerView: 5, spaceBetween: 50, },
+            },
+            pagination: { el: '.swiper-pagination', clickable: true, },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
+        });
+    </script>
+
 </body>
 </html>
